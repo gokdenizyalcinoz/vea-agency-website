@@ -18,18 +18,17 @@ export default function App() {
 
   return (
     <div className="relative min-h-screen bg-background selection:bg-white selection:text-black">
-      {/* Visual background elements */}
       <div className="grain-overlay" />
       <div className="decoration-circle-top" />
       <div className="decoration-circle-bottom" />
-      
+
       <Navbar lang={lang} setLang={setLang} />
-      
+
       <main>
         <Hero lang={lang} />
-        <Work lang={lang} />
         <Services lang={lang} />
         <Approach lang={lang} />
+        <Work lang={lang} />
         <Contact lang={lang} />
       </main>
 
