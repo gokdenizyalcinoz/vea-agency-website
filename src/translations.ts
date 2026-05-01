@@ -10,7 +10,7 @@ export const translations = {
     hero: {
       title: 'Modern web siteleri ve sesli yapay zekâ asistanları.',
       subtitle: 'İşletmenize özel tasarlıyor, kuruyor ve sürdürüyoruz.',
-      scroll: 'Çalışmalar',
+      scroll: 'Hizmetler',
     },
     services: {
       s1: {
@@ -22,8 +22,8 @@ export const translations = {
         desc: 'Telefonlara 7/24 cevap veren, randevu alan, bilgi veren yapay zekâ asistanı.',
       },
       s3: {
-        title: 'Otomasyon & Entegrasyon',
-        desc: 'CRM, WhatsApp, takvim ve form entegrasyonları.',
+        title: 'Bakım & Destek',
+        desc: 'Aylık güncelleme, performans iyileştirme ve sürekli teknik destek.',
       },
     },
     approach: {
@@ -42,7 +42,7 @@ export const translations = {
     },
     work: {
       title: 'Seçili Çalışmalar',
-      more: 'Yeni projeler eklenmektedir.',
+      more: 'İlk projelerimiz hazırlanıyor.',
     },
     contact: {
       title: 'Bir proje konuşalım.',
@@ -60,7 +60,7 @@ export const translations = {
     hero: {
       title: 'Modern websites and voice AI assistants.',
       subtitle: 'We design, build, and maintain specifically for your business.',
-      scroll: 'Work',
+      scroll: 'Services',
     },
     services: {
       s1: {
@@ -69,11 +69,11 @@ export const translations = {
       },
       s2: {
         title: 'Voice AI Receptionist',
-        desc: '7/24 AI assistant that answers calls, books appointments, and provides info.',
+        desc: '24/7 AI assistant that answers calls, books appointments, and provides info.',
       },
       s3: {
-        title: 'Automation & Integration',
-        desc: 'CRM, WhatsApp, calendar, and form integrations.',
+        title: 'Care & Support',
+        desc: 'Monthly updates, performance improvements, and ongoing technical support.',
       },
     },
     approach: {
@@ -92,7 +92,7 @@ export const translations = {
     },
     work: {
       title: 'Selected Work',
-      more: 'New projects are being added.',
+      more: 'Our first projects are being prepared.',
     },
     contact: {
       title: "Let's talk about a project.",
