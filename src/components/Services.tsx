@@ -15,15 +15,15 @@ export default function Services({ lang }: ServicesProps) {
   ];
 
   return (
-    <section id="services" className="py-24 px-8 bg-[#0A0A0A] z-10 relative">
+    <section id="services" className="py-16 md:py-24 px-8 bg-[#0A0A0A] z-10 relative">
       <div className="max-w-[1000px] mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-6">
           {services.map((service, idx) => (
             <motion.div
               key={idx}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
+              viewport={{ once: true, amount: 0.15 }}
               transition={{ duration: 0.6, delay: idx * 0.1 }}
               className="border-t border-white/10 pt-6 group"
             >
