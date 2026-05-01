@@ -15,15 +15,15 @@ export default function Approach({ lang }: ApproachProps) {
   ];
 
   return (
-    <section className="py-24 md:py-48 px-8 bg-[#0A0A0A] z-10 relative">
+    <section className="py-16 md:py-32 px-8 bg-[#0A0A0A] z-10 relative">
       <div className="max-w-[1000px] mx-auto">
-        <div className="flex flex-col gap-24">
+        <div className="flex flex-col gap-16 md:gap-20">
           {steps.map((step, idx) => (
             <motion.div
               key={idx}
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
+              viewport={{ once: true, amount: 0.15 }}
               transition={{ duration: 0.8, delay: idx * 0.2 }}
               className="grid grid-cols-1 md:grid-cols-[120px_1fr] gap-8 md:gap-24"
             >
