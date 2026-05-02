@@ -12,6 +12,7 @@ import Approach from './components/Approach';
 import Work from './components/Work';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import RetellWidget from './components/RetellWidget';
 
 export default function App() {
   const [lang, setLang] = useState<Language>('TR');
@@ -33,6 +34,7 @@ export default function App() {
       </main>
 
       <Footer lang={lang} />
+      <RetellWidget lang={lang} />
     </div>
   );
 }
