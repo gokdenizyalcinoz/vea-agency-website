@@ -1,4 +1,12 @@
-import type { VercelRequest, VercelResponse } from '@vercel/node';
+import type { IncomingMessage, ServerResponse } from 'node:http';
+
+type VercelRequest = IncomingMessage & { body: Record<string, string> };
+type VercelResponse = ServerResponse & {
+  status: (code: number) => VercelResponse;
+  json: (data: unknown) => VercelResponse;
+  end: () => VercelResponse;
+  setHeader: (key: string, value: string) => VercelResponse;
+};
 
 const rateLimitMap = new Map<string, { count: number; resetAt: number }>();
 const RATE_LIMIT_MAX = 2;
@@ -29,7 +37,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     'https://vea-agency-website.vercel.app',
     'http://localhost:3000',
   ];
-  const origin = req.headers.origin ?? '';
+  const origin = (req.headers.origin as string) ?? '';
   if (allowedOrigins.includes(origin)) {
     res.setHeader('Access-Control-Allow-Origin', origin);
   }
@@ -52,7 +60,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return res.status(500).json({ error: 'Sunucu yapılandırma hatası.' });
   }
 
-  const { clinic_name, doctor_name, specialty } = req.body ?? {};
+  const { clinic_name, doctor_name, specialty } = (req.body as Record<string, string>) ?? {};
 
   try {
     const retellRes = await fetch('https://api.retellai.com/v2/create-web-call', {
@@ -78,7 +86,12 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     }
 
     const data = await retellRes.json() as { access_token: string };
-    console.log(JSON.stringify({ event: 'demo_call_started', ip, clinic_name: clinic_name ?? null, timestamp: new Date().toISOString() }));
+    console.log(JSON.stringify({
+      event: 'demo_call_started',
+      ip,
+      clinic_name: clinic_name ?? null,
+      timestamp: new Date().toISOString(),
+    }));
     return res.status(200).json({ access_token: data.access_token });
 
   } catch (err) {
