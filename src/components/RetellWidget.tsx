@@ -11,7 +11,7 @@ interface RetellWidgetProps {
 }
 
 const BACKEND_URL = '/api/create-call';
-const CAL_URL = 'https://cal.com/veaagency/tanisma';
+const CAL_URL = 'https://cal.com/gokdeniz-yalcinoz-0rjbi3/15min';
 const retellClient = new RetellWebClient();
 
 export default function RetellWidget({ lang, triggerRef }: RetellWidgetProps) {
