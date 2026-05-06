@@ -86,7 +86,7 @@ export const translations = {
       ],
       pricingLabel: 'Çalışma modeli',
       pricingHeading: 'Kurulum, entegrasyon, sonra aylık yönetim.',
-      pricingDesc: 'Nova'yı devreye almak iki aşamadan oluşur: işletmenize özel yapılandırma ve entegrasyon aşaması, ardından aylık yönetim ve geliştirme. Fiyat detayları görüşmede netleşir.',
+      pricingDesc: "Nova'yı devreye almak iki aşamadan oluşur: işletmenize özel yapılandırma ve entegrasyon aşaması, ardından aylık yönetim ve geliştirme. Fiyat detayları görüşmede netleşir.",
       pricingCta: 'Görüşme planla',
     },
     socialProof: {
