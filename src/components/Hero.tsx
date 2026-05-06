@@ -6,7 +6,7 @@ interface HeroProps {
   onListenNova?: () => void;
 }
 
-const CAL_URL = 'https://cal.com/veaagency/tanisma';
+const CAL_URL = 'https://cal.com/gokdeniz-yalcinoz-0rjbi3/15min';
 
 export default function Hero({ lang, onListenNova }: HeroProps) {
   const t = translations[lang].hero;
