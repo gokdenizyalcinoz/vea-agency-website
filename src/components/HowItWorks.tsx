@@ -5,7 +5,7 @@ interface HowItWorksProps {
   lang: Language;
 }
 
-const CAL_URL = 'https://cal.com/veaagency/tanisma';
+const CAL_URL = 'https://cal.com/gokdeniz-yalcinoz-0rjbi3/15min';
 
 export default function HowItWorks({ lang }: HowItWorksProps) {
   const t = translations[lang].howItWorks;
